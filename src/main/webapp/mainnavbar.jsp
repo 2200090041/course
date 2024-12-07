@@ -120,7 +120,7 @@ body {
     <a href="adminlogin">Admin Login</a>
     <a href="studentlogin">Student Login</a>
     <a href="facultylogin">Faculty Login</a>
-    <a href="about">About</a>
+    
   </div>
 </div>
 

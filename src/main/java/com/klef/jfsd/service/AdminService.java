@@ -21,7 +21,7 @@ public interface AdminService {
     // Faculty Management
     public String FacultyRegistration(Faculty faculty);
     
-    public List<Faculty> viewAllfaculty();
+    public List<Faculty> viewAllFaculty();
     
     public String deleteFaculty(int facultyId);
 }

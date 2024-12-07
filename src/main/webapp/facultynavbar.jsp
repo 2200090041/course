@@ -74,12 +74,6 @@
          <a href="faculty-dashboard">Dashboard</a>
         <a href="facultyhome">Home</a>
         <a href="addcourse">Add Courses</a>
-          <a href="materials">materials</a>
-            <a href="addassignment">Assignments</a>
-        <a href="faculty-grades">Grading</a>
-        <a href="faculty-schedule">Schedule</a>
-        <a href="faculty-reports">Reports</a>
-        <a href="faculty-settings">Settings</a>
 		<a href="facultylogout">Logout</a>
     </div>
 

@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.klef.jfsd.model.Course;
 import com.klef.jfsd.model.Faculty;
-import com.klef.jfsd.model.Assignment;
+
 import com.klef.jfsd.repository.CourseRepository;
-import com.klef.jfsd.repository.AssignmentRepository;
+
 import com.klef.jfsd.repository.FacultyRepository;
 
 import java.util.List;
@@ -20,8 +20,7 @@ public class FacultyServiceImpl implements FacultyService {
 
     @Autowired
     private CourseRepository courseRepository;  // Injecting CourseRepository
-    @Autowired
-    private AssignmentRepository assignmentRepository;
+ 
 
     @Override
     public Faculty checkfacultylogin(String email, String password) {
@@ -54,11 +53,7 @@ public class FacultyServiceImpl implements FacultyService {
         courseRepository.save(course);  // Saving the course to the repository
         return "Course added successfully!";
     }
-    public String addAssignment(Assignment assignment) {
-        assignmentRepository.save(assignment);  // Saving the course to the repository
-        return "Assignment added successfully!";
-    }
-
+   
     @Override
     public List<Course> viewAllCourse() {
         return courseRepository.findAll();  // Getting all courses

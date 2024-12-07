@@ -14,6 +14,7 @@ import com.klef.jfsd.model.Student;
 import com.klef.jfsd.model.Faculty;
 import com.klef.jfsd.service.AdminService;
 
+import ch.qos.logback.core.model.Model;
 import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
@@ -161,6 +162,13 @@ public class AdminController {
 		return "redirect:/deletestudent";
 	}
 
+	@GetMapping("admindash")
+	public ModelAndView admindash() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("admindash");
+		return mv;
+	}
+	
 	@GetMapping("adminlogout")
 	public ModelAndView adminlogout(HttpServletRequest request) {
 		// Invalidate session on logout
@@ -174,7 +182,7 @@ public class AdminController {
 	@GetMapping("viewallfaculty")
 	public ModelAndView viewallfaculty() {
 		ModelAndView mv = new ModelAndView();
-		List<Faculty> facultyList = adminService.viewAllfaculty();
+		List<Faculty> facultyList = adminService.viewAllFaculty();
 		mv.setViewName("viewallfaculty");
 		mv.addObject("facultyList", facultyList);
 		return mv;
@@ -183,7 +191,7 @@ public class AdminController {
 	@GetMapping("deletefaculty")
 	public ModelAndView deleteFaculty() {
 		ModelAndView mv = new ModelAndView();
-		List<Faculty> facultyList = adminService.viewAllfaculty();
+		List<Faculty> facultyList = adminService.viewAllFaculty();
 		mv.setViewName("deletefaculty");
 		mv.addObject("facultyList", facultyList);
 		return mv;

@@ -98,9 +98,10 @@ body {
   <a href="studentreg">Add Student</a>
   <a href="addfaculty">Add Faculty</a>
   <a href="viewallstudents">View All Students</a>
-  <a href="viewallfaculty">View All Faculty</a>
+
   <a href="deletefaculty">Delete Faculty</a>
   <a href="deletestudent">Delete Students</a>
+  <a href="admindash">Dashboard</a>
   <a href="adminlogout">Logout</a>
 </div>
 

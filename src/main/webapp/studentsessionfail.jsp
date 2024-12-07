@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,7 @@
 <title>Session Expired</title>
 </head>
 <body>
-<h3>Faculty Session Expired</h3><br>
-<a href="facultylogin">Back</a>
+<h3>Session Expired</h3>
+<a href="studentlogin">Back</a>
 </body>
 </html>

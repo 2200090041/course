@@ -56,7 +56,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public List<Faculty> viewAllfaculty() {
+    public List<Faculty> viewAllFaculty() {
         return facultyRepository.findAll(); // Fetch all faculty members
     }
 

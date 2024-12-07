@@ -117,8 +117,7 @@
         <a href="studentprofile">My Profile</a>
         <a href="viewcourse">RegisterCourse</a>
         <a href="viewregisteredcourse">My Course</a>
-        <a href="mymaterials">My Materials</a>
-        <a href="viewassignment">Assignments</a>
+       
         <a href="dashboard">Dashboard</a>
         <a href="studentlogout">Logout</a>
 

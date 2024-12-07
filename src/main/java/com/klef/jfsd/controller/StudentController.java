@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.klef.jfsd.model.Assignment;
 import com.klef.jfsd.model.Student;
 import com.klef.jfsd.repository.CourseRepository;
-import com.klef.jfsd.service.AssignmentService;
+
 import com.klef.jfsd.service.StudentService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -29,8 +28,7 @@ public class StudentController {
     @Autowired
     private CourseRepository courseRepository;
 
-    @Autowired
-    private AssignmentService assignmentService;
+
 
     // Home Page
     @GetMapping("/")
@@ -115,7 +113,13 @@ public class StudentController {
         model.addAttribute("courseList", courseRepository.findAll());
         return "viewcourse";
     }
-
+    @GetMapping("studentsessionfail")
+    public ModelAndView studsessionfail()
+    {
+      ModelAndView mv = new ModelAndView();
+      mv.setViewName("studentsessionfail");
+      return mv;
+    }
     // Register for a Course
     @PostMapping("/registerCourse")
     public String registerForCourse(@RequestParam("courseId") int courseId, HttpSession session, Model model) {
@@ -132,27 +136,20 @@ public class StudentController {
         return "redirect:/viewcourse"; // Redirect to courses page
     }
 
-    // View Registered Courses
     @GetMapping("viewregisteredcourse")
     public String viewRegisteredCourses(HttpSession session, Model model) {
         Student student = (Student) session.getAttribute("student");
 
         if (student == null) {
-            model.addAttribute("message", "Please log in to view registered courses.");
-            return "studentlogin";
+            return "redirect:/studentsessionfail"; // Redirect to session failure page
         }
 
         model.addAttribute("registeredCourses", studentService.getRegisteredCourses(student.getId()));
         return "viewregisteredcourse";
     }
 
-    // View Assignments for a Course
-    @GetMapping("viewassignment")
-    public String viewAssignments(@RequestParam("courseId") int courseId, Model model) {
-        List<Assignment> assignments = assignmentService.getAssignmentsByCourseId(courseId);
-        model.addAttribute("assignments", assignments);
-        return "viewassignment";
-    }
+
+    
 
     // Internship Pages
     @GetMapping("/internships/human-resource-management")

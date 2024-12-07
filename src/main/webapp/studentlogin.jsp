@@ -1,124 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Login</title>
+    <!-- MDBootstrap & FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet">
     <style>
-        /* General styling */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #111; /* Dark background */
-            color: #f4f4f4; /* Light text color */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: #f8f9fa;
         }
 
-        /* Navbar styling to keep it at the top */
-        .navbar-container {
-            width: 100%;
+        .bg-primary {
+            background-color: #0d6efd !important;
         }
 
-        /* Center the form container */
-        .form-container {
-            background-color: #222; /* Darker background for contrast */
-            padding: 40px; /* Increase padding */
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 500px; /* Larger width for the box */
-            margin-top: 60px; /* Space between navbar and form */
-            text-align: center;
-            color: #f4f4f4;
-        }
-
-        /* Table and input styling */
-        table {
-            width: 100%;
-            margin-top: 25px;
-        }
-
-        td {
-            padding: 12px;
-            text-align: left;
-            font-size: 1.2em; /* Larger font size */
-        }
-
-        label {
-            font-weight: bold;
-            color: #f4f4f4; /* Light color for labels */
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 1.1em; /* Bigger font size */
-            border-radius: 4px;
-            border: 1px solid #444; /* Darker border */
-            background-color: #333; /* Dark input background */
-            color: #f4f4f4; /* Light text in input fields */
-            box-sizing: border-box;
-        }
-
-        .button-container {
-            text-align: center;
-        }
-
-        input[type="submit"],
-        input[type="reset"] {
-            padding: 10px 20px;
-            margin: 8px;
+        .btn-primary {
+            background-color: #0d6efd;
             border: none;
-            border-radius: 4px;
-            font-size: 1.1em; /* Bigger button font size */
-            color: #fff;
-            background-color: #c0392b; /* Red button background */
-            cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
-        input[type="submit"]:hover,
-        input[type="reset"]:hover {
-            background-color: #a02920; /* Darker red on hover */
+        .btn-primary:hover {
+            background-color: #0b5ed7;
         }
 
-        h3 {
-            margin-top: 0;
-            font-size: 1.8em; /* Bigger header font size */
-            color: #e74c3c; /* Red color for header */
+        .welcome-title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #0d6efd;
+        }
+
+        .back-to-main-navbar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-to-main-navbar a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-to-main-navbar a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar stays at the top -->
-    <div class="navbar-container">
-        <%@include file="mainnavbar.jsp" %>
-    </div>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <!-- Image Section -->
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                     class="img-fluid" alt="Sample image">
+            </div>
 
-    <!-- Centered Student Login Form -->
-    <div class="form-container" align="center">
-        <h3><u>Student Login</u></h3> <!-- Moved inside the form container -->
-        <form method="post" action="checkstudentlogin">
-            <table>
-                <tr>
-                    <td><label for="semail">Enter Email ID</label></td>
-                    <td><input type="email" id="semail" name="semail" required/></td>
-                </tr>
-                <tr>
-                    <td><label for="spwd">Enter Password</label></td>
-                    <td><input type="password" id="spwd" name="spwd" required/></td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="button-container">
-                        <input type="submit" value="Login"/>
-                        <input type="reset" value="Clear"/>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+            <!-- Form Section -->
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form method="post" action="checkstudentlogin">
+                    <!-- Welcome Title -->
+                    <div class="welcome-title">Welcome to Student Login</div>
 
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="semail" name="semail" class="form-control form-control-lg"
+                               placeholder="Enter a valid email address" required />
+                        <label class="form-label" for="semail">Email address</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <input type="password" id="spwd" name="spwd" class="form-control form-control-lg"
+                               placeholder="Enter password" required />
+                        <label class="form-label" for="spwd">Password</label>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-0">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="rememberMe" />
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                    </div>
+                </form>
+
+                <!-- Link to Main Navbar -->
+                <div class="back-to-main-navbar">
+                    <a href="mainnavbar.jsp"><i class="fas fa-arrow-left"></i> Back to Main Navigation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MDB JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
 </body>
 </html>
