@@ -133,36 +133,17 @@ if(s == null) {
         </div>
 
         <!-- Materials & Assignments Bar Chart -->
-        <div class="card card-2">
-            <h2>Materials & Assignments</h2>
-            <canvas id="materialsAssignmentsChart"></canvas>
-        </div>
-
+       
         <!-- Student Ratings -->
         <div class="card card-3">
             <h2>Student Rating</h2>
             <p class="rating">4.5 / 5.0</p>
         </div>
 
-        <!-- Enrolled Courses -->
-        <div class="card card-4">
-            <h2>Enrolled Courses</h2>
-            <div class="course-list">
-                <p><strong>Mathematics 101</strong> - March 2023 to May 2023</p>
-                <p><strong>Japanese Language</strong> - March 2023 to June 2023</p>
-                <p><strong>English Grammar</strong> - February 2023 to April 2023</p>
-            </div>
-        </div>
+        
 
         <!-- Upcoming Deadlines -->
-        <div class="card card-1">
-            <h2>Upcoming Deadlines</h2>
-            <div class="course-list">
-                <p><strong>JFSD Assignment</strong> - Due: 25th Nov 2024</p>
-                <p><strong>JAVA Language Test</strong> - Due: 28th Nov 2024</p>
-                <p><strong>English Grammar Project</strong> - Due: 1st Dec 2024</p>
-            </div>
-        </div>
+        
 
         <!-- Course Progress -->
         <div class="card card-2">
@@ -170,11 +151,7 @@ if(s == null) {
             <canvas id="courseProgressChart"></canvas>
         </div>
 
-        <!-- Assignments Pending -->
-        <div class="card card-3">
-            <h2>Assignments Pending</h2>
-            <p>Pending Assignments: 3</p>
-        </div>
+        
 
     </div>
 </div>
@@ -200,26 +177,7 @@ if(s == null) {
         }
     });
 
-    // Materials & Assignments Bar Chart
-    const materialsAssignmentsChart = new Chart(document.getElementById('materialsAssignmentsChart'), {
-        type: 'bar',
-        data: {
-            labels: ['Materials Accessed', 'Assignments Completed', 'Pending Assignments'],
-            datasets: [{
-                label: 'Count',
-                data: [40, 25, 5],
-                backgroundColor: ['#457b9d', '#a8dadc', '#e63946'],
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+    
 
     // Course Progress Line Chart (example)
     const courseProgressChart = new Chart(document.getElementById('courseProgressChart'), {

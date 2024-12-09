@@ -155,21 +155,7 @@
         <a href="mycourse.jsp">View Courses</a>
     </div>
 
-    <!-- Assignments Card -->
-    <div class="card">
-        <img src="https://www.modeloe.com/Content/UploadImage/Template/10312/d6310561-0baa-4ed1-9d9e-8417f750e8ea_img.png" alt="Assignments">
-        <h3>Assignments</h3>
-        <p>Stay on top of your assignments and track upcoming deadlines to keep your studies on track.</p>
-        <a href="Assignments.jsp">View Assignments</a>
-    </div>
-
-    <!-- Progress and Performance Card -->
-    <div class="card">
-        <img src="https://img.freepik.com/premium-vector/people-study-online-courses-with-books-laptop-online-library-education-center-remote-school-college-university-cartoon-adults-reading-decent-vector-scene_543062-5400.jpg" alt="Your Progress">
-        <h3>Your Progress</h3>
-        <p>Review your progress across various courses and get insights on how to improve.</p>
-        <a href="materials.jsp">View Progress</a>
-    </div>
+    
 </div>
 
 </body>

@@ -120,7 +120,7 @@
 
         <!-- Faculty Progress Chart -->
         <div class="card">
-            <h2>Faculty Progress</h2>
+            <h2>Student Progress</h2>
             <canvas id="facultyProgressChart"></canvas>
         </div>
 

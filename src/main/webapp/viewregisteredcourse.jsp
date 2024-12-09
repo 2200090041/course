@@ -63,7 +63,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             text-align: center;
             margin-top: 40px;
-        }
+        } 
 
         table {
             width: 100%;
@@ -138,10 +138,7 @@
                             <td>${course.courseDescription}</td>
                             <td>${course.coursePrice}</td>
                             <td>
-                                <!-- Unregister Link with student and course IDs -->
-                                <a href="/unregister?courseId=${course.id}&studentId=${student.id}" class="unregister-link">
-                                    Unregister
-                                </a>
+                                
                             </td>
                         </tr>
                     </c:forEach>
